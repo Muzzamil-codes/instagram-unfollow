@@ -27,7 +27,7 @@ def check_if_cached_exists(file_name):
 
 
 def get_followers() -> list:
-    if follower_list := check_if_cached_exists("followers.txt") is not None:
+    if (follower_list := check_if_cached_exists("followers.txt")) is not None:
         print("Using cached followers list. Delete followers.txt and rerun if you want to refresh.")
     else:
         print("Getting followers")
@@ -49,7 +49,7 @@ def get_followers() -> list:
 
 
 def get_following() -> list:
-    if following_list := check_if_cached_exists("following.txt") is not None:
+    if (following_list := check_if_cached_exists("following.txt")) is not None:
         print("Using cached following list. Delete following.txt and rerun if you want to refresh.")
     else:
         print("Getting following")
